@@ -4,7 +4,9 @@
     <style>
       body { 
         background: rgb(137, 161, 199);
-        margin: 10px;
+        padding: 10px;
+	margin: 0px;
+	border: 4px solid black;
       }
 
       h1,h2,h3 { text-align: center; }
@@ -35,6 +37,14 @@
 	samples are gists since they are only a file or two and not
 	really intended for collaberation. Peruse the menu below.
       </p>
+
+      <h2>Table Of Contents</h2>
+      <ul>
+	<li><a href="#heapsort">heapsort in Python</a></li>
+	<li><a href="#parser">parser.el in ELisp</a></li>
+	<li><a href="#mergesort">merge-sort.lisp in Common Lisp</a></li>
+	<li><a href="#futuretask">FutureTask.java in Java</a></li>
+      </ul>
     </div>
 
     <div id="heapsort" class="box">
@@ -60,7 +70,7 @@
 
     </div>
 
-    <div id="parser.el" class="box">
+    <div id="parser" class="box">
       <h2>parser.el</h2>
       <h3><a href="https://gist.github.com/coderofmattie/d5fe4e8a2fb11b03d5de218c7d4c6e79">parser.el on GitHub</a></h3>
 
@@ -73,7 +83,7 @@
       </p>
     </div>
 
-    <div id="merge-sort.el" class="box">
+    <div id="mergesort" class="box">
       <h2>merge-sort.lisp</h2>
       <h3><a href="https://gist.github.com/coderofmattie/fc1c8fd252ddd8699a375fd1dd6cab77">merge-sort.lisp on GitHub</a></h3>
       <p>
@@ -122,6 +132,19 @@ Evaluation took:
   
 sorted = to long to print
       </pre>
+    </div>
+
+    <div id="futuretask" class="box">
+      <h2>Java Concurrency</h2>
+      <h3><a href="https://gist.github.com/coderofmattie/92dd9562145d0bee0dbf87d170e94087">FutureTask.java on GitHub</a></h3>
+
+      <p>
+	FutureTask was the implementation of a library interface for
+	running tasks that complete at some time in the future. I
+	wrote it so you could instantiate a task and it would schedule
+	it for execution in a worker queue implementation in the class
+	static.
+      </p>
     </div>
   </body>
 </html>
