@@ -7,18 +7,20 @@
         margin: 10px;
       }
 
-      #intro {
+      h1,h2,h3 { text-align: center; }
+
+      .box {
         margin: 10px;
+	margin-bottom: 1em;
 	padding: 1em;
+
 	background: white;
+        box-shadow: 10px 10px;
       }
-
-      h1,h2 { text-align: center; }
-
     </style>
   </head>
   <body>
-    <div id="intro">
+    <div id="intro" class="box">
       <h1>Michael Mattie's Github Site</h1>
 
       <h2>Introduction</h2>
@@ -33,6 +35,93 @@
 	samples are gists since they are only a file or two and not
 	really intended for collaberation. Peruse the menu below.
       </p>
+    </div>
+
+    <div id="heapsort" class="box">
+      <h2>HeapSort</h2>
+      <h3><a href="https://gist.github.com/coderofmattie/b14734fe00988a1a5b5683d984917d0e">heapsort.py on GitHub</a></h3>
+
+      <p>
+	I was investigating the Heap Sort algorithm for sorting in
+	place with heaps. During my implementation of the algorithm
+	from Essential Algorithms by Rod Stephens I discovered that
+	the book's algorithm was producing broken heaps. I was able to
+	modify the algorithm and correct the problem, but I found that
+	even with other algorithms such as the Wikipedia/MIT version
+	there were still broken heaps.
+      </p>
+
+      <p>
+	My heapsort.py implements the three versions and benchmarks
+	them. My conclusion is that the broken heaps are tolerated in
+	the MIT version which pushes values down, but not in the
+	Essential Algorithms which pushes values up.
+      </p>
+
+    </div>
+
+    <div id="parser.el" class="box">
+      <h2>parser.el</h2>
+      <h3><a href="https://gist.github.com/coderofmattie/d5fe4e8a2fb11b03d5de218c7d4c6e79">parser.el on GitHub</a></h3>
+
+      <p>
+	parser.el is a project from my early LISP days to create a
+	parser compiler in ELisp. It used a number of advanced
+	techniques such as macros, co-routines, and greedy packing of
+	symbol streams to implement a PEG compiler that produces code
+	that looks human written.
+      </p>
+    </div>
+
+    <div id="merge-sort.el" class="box">
+      <h2>merge-sort.lisp</h2>
+      <h3><a href="https://gist.github.com/coderofmattie/fc1c8fd252ddd8699a375fd1dd6cab77">merge-sort.lisp on GitHub</a></h3>
+      <p>
+	I decided to implement the merge-sort algorithm as it looked
+	like the first algorithm that was LISP friendly since it
+	consisted of merging lists. I also wrote common lisp for the
+	first time.
+      </p>
+
+      <p>
+	The algorithm worked when I implemented it but the performance
+	seemed terrible. I analyzed the algorithm and determined that
+	the operations like append that work at the end of lists are
+	O(n) for every operation. I wrote a queue implementation that
+	resulted in a 44x speedup, and memery usage went from 1.5Gb to
+	2Mb.
+      </p>
+
+      <p>
+	Here is the difference on a sort of 10,000 elements.
+      </p>
+
+      <pre>
+DEFAULT LIBRARY FUNCTIONS
+
+merge-sort.lisp -> running now
+Evaluation took:
+  0.402 seconds of real time
+  0.401896 seconds of total run time (0.374674 user, 0.027222 system)
+  [ Run times consist of 0.012 seconds GC time, and 0.390 seconds non-GC time. ]
+  100.00% CPU
+  888,749,204 processor cycles
+  1,599,489,264 bytes consed
+  
+sorted = to long to print
+
+MY QUEUE FUNCTIONS
+
+merge-sort.lisp -> running now
+Evaluation took:
+  0.009 seconds of real time
+  0.008828 seconds of total run time (0.008275 user, 0.000553 system)
+  100.00% CPU
+  19,489,098 processor cycles
+  2,752,416 bytes consed
+  
+sorted = to long to print
+      </pre>
     </div>
   </body>
 </html>
