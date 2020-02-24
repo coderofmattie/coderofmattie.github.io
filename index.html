@@ -41,12 +41,14 @@
       <h2>Table Of Contents</h2>
       <ul>
 	<li><a href="#verify">Program Verification diagram</a></li>
+	<li><a href="#fd_alloc">fd_alloc in shell (featured in diagram)</a></li>
 	<li><a href="#heapsort">heapsort in Python</a></li>
 	<li><a href="#parser">parser.el in ELisp</a></li>
 	<li><a href="#mergesort">merge-sort.lisp in Common Lisp</a></li>
 	<li><a href="#futuretask">FutureTask.java in Java</a></li>
 	<li><a href="#language">language.clj in Clojure</a></li>
 	<li><a href="#sedify">sedify-C++.sh in sed/shell</a></li>
+	<li><a href="#rcq">rcq.pl in Perl5</a></li>
       </ul>
     </div>
 
@@ -60,6 +62,15 @@
       </p>
 
       <img src="fd_alloc.png"/>
+    </div>
+
+    <div id="fd_alloc" class="box">
+      <h2>fd_alloc file handle allocator/manager written in Zsh</h2>
+      <h3><a href="https://gist.github.com/coderofmattie/8e76a7b7d4e345470976385b146ed93c">fd_alloc.sh on GitHub</a></h3>
+      <p>
+	A sophisticated byte-compiled Z shell library for allocating
+	file handles for regular processes and co-processes.
+      </p>
     </div>
 
     <div id="heapsort" class="box">
@@ -181,6 +192,19 @@ sorted = to long to print
 	I needed to make some edits in mulitple files so I devised a
 	scheme to run them through sed and make the necessary changes
 	with one script. This is the result.
+      </p>
+    </div>
+
+    <div id="rcq" class="box">
+      <h2>rcq version control wrapper</h2>
+      <h3><a href="https://gist.github.com/coderofmattie/b301c920fd2ddaaaf24d46833ca15f9a">rcq.pl on GitHub</a></h3>
+
+      <p>
+	rcq is a wrapper around version control systems that I wrote
+	because I was using so many different version control systems
+	including git, darcs, and perforce at the time. It references
+	"Fault" a library not provided that classified exceptions and
+	provided a general mechanism for handling them.
       </p>
     </div>
   </body>
