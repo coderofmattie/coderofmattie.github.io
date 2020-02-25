@@ -40,6 +40,7 @@
       <h2><a href="http://www.linkedin.com/in/mike-mattie">LinkedIn</a></h2>
 
       <h2>Introduction</h2>
+
       <p>
 	I am Michael Mattie, a Senior Software Engineer on the West
 	Coast. I love programming: particularly in Python and LISP.
@@ -52,43 +53,22 @@
 	really intended for collaberation. Peruse the menu below.
       </p>
 
-      <h2>Table Of Contents</h2>
+      <h2>Languages, Data Structures, and Algorithms examples</h2>
       <ul>
-	<li><a href="#verify">[State Diagram] - Program Verification</a></li>
-	<li><a href="#fd_alloc">[shell] - fd_alloc in shell (featured in diagram)</a></li>
 	<li><a href="#heapsort">[Python] - heapsort algorithm with 3 variations</a></li>
-	<li><a href="#parser">[Elisp] - PEG Grammar parser compiler</a></li>
 	<li><a href="#mergesort">[Common Lisp] - merge-sort with queues</a></li>
-	<li><a href="#futuretask">[Java] - FutureTask implementation using a background worker queue</a></li>
+	<li><a href="#futuretask">[Java] - FutureTask concurrency using a background worker queue</a></li>
+	<li><a href="#rc">[Perl5] - version control wrapper</a></li>
+	<li><a href="#parser">[Elisp] - PEG Grammar parser compiler</a></li>
+	<li><a href="#verify">[State Diagram] - Program Verification</a></li>
+	<li><a href="#fd_alloc">[shell] - fd_alloc allocator (featured in diagram)</a></li>
 	<li><a href="#language">[Clojure] - Natural language pattern matching based on keywords</a></li>
-	<li><a href="#sedify">[sed] - process C++ source with sed</a></li>
-	<li><a href="#rcq">[Perl5] - version control wrapper</a></li>
+	<li><a href="#sedify">[UNIX] - process C++ source with sed</a></li>
       </ul>
     </div>
 
-    <div id="verify" class="box">
-      <h2>Program Verification Diagram of the fd allocator written in shell</h2>
-
-      <p>
-	I was attempting to do some program verification on some shell
-	code and I wrote this diagram defining the states of the
-	program and the transitions in two dimensions.
-      </p>
-
-      <img src="fd_alloc.png"/>
-    </div>
-
-    <div id="fd_alloc" class="box">
-      <h2>fd_alloc file handle allocator/manager written in Zsh</h2>
-      <h3><a href="https://gist.github.com/coderofmattie/8e76a7b7d4e345470976385b146ed93c">fd_alloc.sh on GitHub</a></h3>
-      <p>
-	A sophisticated byte-compiled Z shell library for allocating
-	file handles for regular processes and co-processes.
-      </p>
-    </div>
-
     <div id="heapsort" class="box">
-      <h2>HeapSort</h2>
+      <h2>[Python] - heapsort algorithm with 3 variations</h2>
       <h3><a href="https://gist.github.com/coderofmattie/b14734fe00988a1a5b5683d984917d0e">heapsort.py on GitHub</a></h3>
 
       <p>
@@ -107,24 +87,11 @@
 	the MIT version which pushes values down, but not in the
 	Essential Algorithms which pushes values up.
       </p>
-
     </div>
 
-    <div id="parser" class="box">
-      <h2>parser.el</h2>
-      <h3><a href="https://gist.github.com/coderofmattie/d5fe4e8a2fb11b03d5de218c7d4c6e79">parser.el on GitHub</a></h3>
-
-      <p>
-	parser.el is a project from my early LISP days to create a
-	parser compiler in ELisp. It used a number of advanced
-	techniques such as macros, co-routines, and greedy packing of
-	symbol streams to implement a PEG compiler that produces code
-	that looks human written.
-      </p>
-    </div>
 
     <div id="mergesort" class="box">
-      <h2>merge-sort.lisp</h2>
+      <h2>[Common Lisp] merge-sort with queues</h2>
       <h3><a href="https://gist.github.com/coderofmattie/fc1c8fd252ddd8699a375fd1dd6cab77">merge-sort.lisp on GitHub</a></h3>
       <p>
 	I decided to implement the merge-sort algorithm as it looked
@@ -175,7 +142,7 @@ sorted = to long to print
     </div>
 
     <div id="futuretask" class="box">
-      <h2>Java Concurrency</h2>
+      <h2>[Java] FutureTask concurrency using a background worker queue</h2>
       <h3><a href="https://gist.github.com/coderofmattie/92dd9562145d0bee0dbf87d170e94087">FutureTask.java on GitHub</a></h3>
 
       <p>
@@ -187,8 +154,56 @@ sorted = to long to print
       </p>
     </div>
 
+    <div id="rc" class="box">
+      <h2>[Perl5] version control wrapper</h2>
+      <h3><a href="https://gist.github.com/coderofmattie/b301c920fd2ddaaaf24d46833ca15f9a">rc.pl on GitHub</a></h3>
+
+      <p>
+	rc is a wrapper around version control systems that I wrote
+	because I was using so many different version control systems
+	including git, darcs, and perforce at the time. It references
+	"Fault" a library not provided that classified exceptions and
+	provided a general mechanism for handling them.
+      </p>
+    </div>
+
+    <div id="parser" class="box">
+      <h2>[Elisp] PEG grammer parser compiler</h2>
+      <h3><a href="https://gist.github.com/coderofmattie/d5fe4e8a2fb11b03d5de218c7d4c6e79">parser.el on GitHub</a></h3>
+
+      <p>
+	parser.el is a project from my early LISP days to create a
+	parser compiler in ELisp. It used a number of advanced
+	techniques such as macros, co-routines, and greedy packing of
+	symbol streams to implement a PEG compiler that produces code
+	that looks human written.
+      </p>
+    </div>
+
+    <div id="verify" class="box">
+      <h2>Program Verification Diagram of the fd allocator written in shell</h2>
+
+      <p>
+	I was attempting to do some program verification on some shell
+	code and I wrote this diagram defining the states of the
+	program and the transitions along with constraints on
+	variables in the states.
+      </p>
+
+      <img src="fd_alloc.png"/>
+    </div>
+
+    <div id="fd_alloc" class="box">
+      <h2>fd_alloc file handle allocator/manager written in shell</h2>
+      <h3><a href="https://gist.github.com/coderofmattie/8e76a7b7d4e345470976385b146ed93c">fd_alloc.sh on GitHub</a></h3>
+      <p>
+	A sophisticated byte-compiled Z shell library for allocating
+	file handles for regular processes and co-processes.
+      </p>
+    </div>
+
     <div id="language" class="box">
-      <h2>language processing in clojure</h2>
+      <h2>Natural Language Processing in Clojure</h2>
       <h3><a href="https://gist.github.com/coderofmattie/fda0532e6e854bbf8b359790e66a0cf7">language.clj on GitHub</a></h3>
 
       <p>
@@ -198,27 +213,15 @@ sorted = to long to print
       </p>
     </div>
 
+
     <div id="sedify" class="box">
-      <h2>sedify-C++ in Z Shell</h2>
+      <h2>sedify-C++ in sed</h2>
       <h3><a href="https://gist.github.com/coderofmattie/919d96ac32044a882ec8022c49ae4ddf">sedify-C++.sh on GitHub</a></h3>
 
       <p>
 	I needed to make some edits in mulitple files so I devised a
 	scheme to run them through sed and make the necessary changes
 	with one script. This is the result.
-      </p>
-    </div>
-
-    <div id="rcq" class="box">
-      <h2>rcq version control wrapper</h2>
-      <h3><a href="https://gist.github.com/coderofmattie/b301c920fd2ddaaaf24d46833ca15f9a">rcq.pl on GitHub</a></h3>
-
-      <p>
-	rcq is a wrapper around version control systems that I wrote
-	because I was using so many different version control systems
-	including git, darcs, and perforce at the time. It references
-	"Fault" a library not provided that classified exceptions and
-	provided a general mechanism for handling them.
       </p>
     </div>
   </body>
