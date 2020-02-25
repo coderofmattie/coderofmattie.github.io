@@ -75,17 +75,26 @@
 	I was investigating the Heapsort algorithm for sorting in
 	place with heaps. During my implementation of the algorithm
 	from "Essential Algorithms" by Rod Stephens I discovered that
-	the book's algorithm was producing broken heaps. I was able to
-	modify the algorithm and correct the problem, but I found that
-	even with other algorithms such as the Wikipedia/MIT version
-	there were still broken heaps.
+	the book's algorithm was producing broken heaps.
+      </p>
+
+      <p>
+	I developed a modified algorithm and corrected the problem,
+	but I found that even with other algorithms such as the
+	Wikipedia/MIT version there were still broken heaps.
       </p>
 
       <p>
 	My heapsort.py implements the three versions and benchmarks
-	them. My conclusion is that the broken heaps are tolerated in
-	the MIT version which pushes values down, but not in the
-	Essential Algorithms which pushes values up.
+	them, and checks their correctness.
+      </p>
+
+      <p>
+	My conclusion is that the broken heaps are tolerated in the
+	MIT version which pushes values down, but not in the Essential
+	Algorithms which pushes values up. My version of the algorithm
+	compared about equal to the other two versions and always
+	produced correct results at all stages.
       </p>
     </div>
 
